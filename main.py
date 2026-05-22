@@ -1,9 +1,10 @@
 from Modelos.cliente import Cliente
 from Modelos.pessoas import Pessoas
+from Modelos.produtos import Produtos
+#from Modelos.loja import Loja
+#from Modelos.pedido import Pedido
 
 
-cliente1 = Cliente("Augusto", 20, "123.456.789-00")
-pessoa1 = Pessoas("Maria", 30, "987.654.321-00")
 
-print(pessoa1.get_nome())
-cliente1.ExibirNome()
+produto1 = Produtos("Camiseta", 50.0, 10)
+
