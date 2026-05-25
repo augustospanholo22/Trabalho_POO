@@ -4,7 +4,7 @@ class Produtos:
         self.preco = preco
         self.estoque = estoque
 
-    def exibir_detalhes(self):
+    def exibir_detalhes_produto(self):
         return f"Produto: {self.nome}, Preço: R${self.preco:.2f}, Estoque: {self.estoque}"
     
     def diminuir_estoque(self, quantidade):
