@@ -1,7 +1,7 @@
 from Modelos.cliente import Cliente
 from Modelos.pessoas import Pessoas
 from Modelos.produtos import Produtos
-#from Modelos.loja import Loja
+from Modelos.loja import Loja
 from Modelos.pedido import Pedido
 
 
@@ -25,3 +25,8 @@ print(pedido1.exibir_resumo())
 print(pedido1.finalizar_pedido())
 
 print(produto1.exibir_detalhes_produto())
+
+
+loja1 = Loja([])
+loja1.adicionar_produto(produto1)
+print(loja1.listar_produtos())
