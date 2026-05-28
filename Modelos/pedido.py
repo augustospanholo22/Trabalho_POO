@@ -31,15 +31,16 @@ class Pedido:
 
 
     def exibir_resumo(self):
-        detalhes = f"Cliente: {self.cliente.nome}\nValor Total: R$ {self.calcular_valor_total():.2f}\nProdutos:\n"
+        detalhes = f"Cliente: {self.cliente.nome}\nProdutos:\n"
         for p, quantidade in self.produtos:
             detalhes += f"- {p.nome} (x{quantidade}): R$ {p.preco:.2f}\n"
+        detalhes += f"Valor Total: R$ {self.calcular_valor_total():.2f}\n"
         return detalhes
     
     def finalizar_pedido(self):
         if not self.produtos:
             raise ValueError("O pedido não pode ser finalizado sem produtos.")
-        return f"Pedido finalizado para {self.cliente.nome}. Total: R$ {self.calcular_valor_total():.2f}"
+        return f"Pedido finalizado para {self.cliente.nome}.\nTotal: R$ {self.calcular_valor_total():.2f}"
     
 
     
