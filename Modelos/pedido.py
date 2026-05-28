@@ -40,9 +40,11 @@ class Pedido:
     def finalizar_pedido(self):
         if not self.produtos:
             raise ValueError("O pedido não pode ser finalizado sem produtos.")
-        return f"Pedido finalizado para {self.cliente.nome}.\nTotal: R$ {self.calcular_valor_total():.2f}"
-    
+        total = self.calcular_valor_total()
+        desconto = 0.10 
+        if total > 500:
+            total_final = total * (1 - desconto)
+        else:
+            total_final = total
 
-    
-
-    
+        return f"Pedido finalizado para {self.cliente.nome}.\nTotal: R$ {total_final:.2f}"
