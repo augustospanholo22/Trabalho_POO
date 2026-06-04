@@ -22,7 +22,7 @@ class Cliente(Pessoas):
         self.__carrinho = carrinho
 
     @override
-    def exibir_dados(self):
+    def exibir_detalhes(self):
         detalhes_pessoa = super().exibir_detalhes()
         return f"{detalhes_pessoa}, Carrinho: {len(self.carrinho)} itens"
 

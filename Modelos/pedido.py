@@ -44,7 +44,6 @@ class Pedido:
         desconto = 0.10 
         if total > 500:
             total_final = total * (1 - desconto)
-        else:
-            total_final = total
+        total_final = total
 
-        return f"Pedido finalizado para {self.cliente.nome}.\nTotal: R$ {total_final:.2f}"
+        return f"Pedido finalizado para {self.cliente.nome}.\nTotal: R$ {total_final:.2f}" 
