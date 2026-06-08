@@ -13,6 +13,9 @@ class Loja:
     
     @lista_produtos.setter
     def lista_produtos(self, nova_lista):
+        for item in nova_lista:
+            if not isinstance(item, Produtos):
+                raise TypeError("Todos os itens devem ser produtos")
         if not isinstance(nova_lista, list):
             raise TypeError("deve ser uma lista")
         self.__lista_produtos = nova_lista

@@ -41,9 +41,9 @@ class Pedido:
         if not self.produtos:
             raise ValueError("O pedido não pode ser finalizado sem produtos.")
         total = self.calcular_valor_total()
-        desconto = 0.10 
         if total > 500:
-            total_final = total * (1 - desconto)
-        total_final = total
+            total *= 0.9
 
+        self.cliente.carrinho.clear()
         return f"Pedido finalizado para {self.cliente.nome}.\nTotal: R$ {total_final:.2f}" 
+        
